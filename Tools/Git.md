@@ -33,6 +33,32 @@ git commit -m "xxx" # 提交并且添加提交说明
 git mv xx cc # 移动文件
 git rm xx # 删除文件
 ```
+### 贮藏与清理
+```bash
+git stash # 将暂存未提交的数据通过一个栈保存下来
+git stash push # 同上
+git stash list # 查看所有贮藏
+git stash drop stash_name # 删除贮藏
+git stash clear # 删除所有缓存stash
+```
+- 贮藏重新应用
+```bash
+git stash pop # 删除缓存对战第一个stash并且应用到当前目录
+git stash apply # 与pop相比补删除stash拷贝
+```
+- 查看特定stash的diff
+```bash
+git stash show
+git stash show -p # 查看特定stash全部diff
+```
+- 从stash新建分支
+```bash
+git stash branch new
+```
+- 清理工作目录
+```bash
+git clean # 清理工作目录
+```
 ## 远程仓库
 - 初始化本地密钥
 ```bash
@@ -58,7 +84,7 @@ git pull origin main
 ```bash
 git clone https://xx/xx # 克隆现有仓库
 ```
-- *提交历史*
+- **提交历史**
 ```bash
 git log # 查看提交历史
 git log -p # 显示每次提交所引入的差异
