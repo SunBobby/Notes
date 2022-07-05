@@ -1,2 +1,2 @@
 # Notes
-Markdown笔记仓库
+学习备忘录
